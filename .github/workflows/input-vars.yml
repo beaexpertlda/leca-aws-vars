@@ -33,7 +33,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   call-aws-workflow:
-    uses: ./.github/workflows/aws.yml
+    uses: ./.github/workflows/${{ github.event.inputs.nuvem }}.yml
     with:
       msg : ${{ github.event.inputs.mensagem }}
     secrets: inherit
